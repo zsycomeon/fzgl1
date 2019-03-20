@@ -1,0 +1,48 @@
+<view class="b1" hidden="{{flag}}" style="z-index:9999;">
+  <loading>正在加载...</loading>
+</view>
+<view class='contir' wx:if="{{flag}}">
+  <view>
+    <swiper indicator-dots="true" circular="true" autoplay="true" circularindicator-color="white" indicator-active-color="#650100" style="height:360rpx;">
+      <block wx:for="{{banner}}" wx:key="">
+        <swiper-item bindtap="jump" data-url="{{item.Link}}">
+          <image style='width:100%;height:100%;' src="{{item.Image}}" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view wx:for="{{plate}}" wx:key="">
+
+    <view class='just'>
+      <view class='title'>
+        {{item.Name}}
+      </view>
+      <view class='line'></view>
+      <view class='list-item'>
+        <block wx:for="{{item.festival}}" wx:for-item="item2" wx:key="" wx:for-index="index2">
+          <block wx:if="{{index2 == 3}}">
+            <view class='list-item-coin'>
+              <image bindtap="jump" data-url="TemplateID={{item2.TemplateID}}" src='{{item2.Cover}}'></image>
+              <view>{{item2.Name}}</view>
+            </view>
+      <view class='guanggao' wx:if="{{index===0 || index===1}}">
+        <ad unit-id="adunit-5ee7250c7f85fbfa"></ad>
+</view>
+          </block>
+          <block wx:else>
+            <view class='list-item-coin'>
+              <image bindtap="jump" data-url="TemplateID={{item2.TemplateID}}" src='{{item2.Cover}}'></image>
+              <view>{{item2.Name}}</view>
+            </view>
+          </block>
+        </block>
+      </view>
+
+    </view>
+  </view>
+  <view>
+    <button open-type="contact" class='kefu' wx:if="{{kefu}}">
+      <image src="../../images/kefu.png" style='width: 100rpx;height: 100rpx;margin-left: -30rpx;'></image>
+    </button>
+  </view>
+</view>

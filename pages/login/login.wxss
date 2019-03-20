@@ -1,0 +1,36 @@
+.login{
+  width: 100wv;
+  height: 100vh;
+  background: linear-gradient(#6d01a5, #f0f0f0);
+  display: flex;
+  flex-direction: column;
+  
+}
+.login image{
+  width: 208rpx;
+  height: 223rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  margin-top: 280rpx;
+}
+.login text{
+  font-size: 36px;
+  font-weight: 700;
+  color: #6d01a5;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.login button{
+  width: 380rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #ff6182;
+  color: #fff;
+  border-radius: 200rpx;
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: center;
+  
+}

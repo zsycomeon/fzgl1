@@ -1,0 +1,25 @@
+<view class="b1" hidden="{{flag}}" style="z-index:9999;">
+  <loading>正在加载...</loading>
+</view>
+<view class='contir' wx:if="{{flag}}">
+ <view>
+          <ad unit-id="adunit-5ee7250c7f85fbfa"></ad>
+</view>
+  <view class='just'>
+    <view class='list-item'>
+      <view wx:for="{{plate}}" wx:for-item="item2" wx:key="">
+        <view class='list-item-coin'>
+          <image bindtap="jump" data-url="TemplateID={{item2.TemplateID}}" src='{{item2.Cover}}'></image>
+          <view>{{item2.Name}}</view>
+        </view>
+         
+      </view>
+    </view>
+   
+  </view>
+  <view>
+    <button open-type="contact" class='kefu' wx:if="{{kefu}}">
+      <image src="../../images/kefu.png" style='width: 100rpx;height: 100rpx;margin-left: -30rpx;'></image>
+    </button>
+  </view>
+</view>

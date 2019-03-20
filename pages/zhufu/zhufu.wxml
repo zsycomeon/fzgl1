@@ -1,0 +1,51 @@
+<view class="b1" hidden="{{flag}}" style="z-index:9999;">
+  <loading>正在加载...</loading>
+</view>
+<view class='contor' style="background-image: url('{{background}}');" wx:if="{{flag}}">
+  <view>
+    <ad unit-id="adunit-5ee7250c7f85fbfa"></ad>
+  </view>
+  <view class="music">
+    <audio loop="true" src="{{music_url}}" id="myAudio"></audio>
+    <image bindtap='music_on' wx:if="{{musicOn}}" style='width:64rpx;height:64rpx;' animation="{{animationData}}" src='../../images/music_start.png'></image>
+    <image bindtap='music_on' wx:else style='width:64rpx;height:64rpx;' src='../../images/music_stop.png'></image>
+  </view>
+  <import src="../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  <view wx:if="{{btn}}">
+    <button type="primary" size="default" class='button' open-type="share" style="background:{{textColor}}">
+      {{btnshare}}
+    </button>
+    <button class='button2' hover-class="button2_af" open-type="share">{{btnrest}}</button>
+  </view>
+  <view wx:else>
+    <button type="primary" size="default" class='button' open-type="share" style="background:{{textColor}}">
+      <image class="forward2" src='https://mini.huohoo.com/wm/forward.png'></image>
+      {{btnshare}}
+    </button>
+    <button class='button2' hover-class="button2_af" bindtap='clickPay'>{{btnrest}}</button>
+  </view>
+
+
+
+  <view class='model_content' style="height:{{sysInfo.windowHeight*0.25}}px;display:{{dd}}">
+    <view class="user-photo">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="aa">
+      <image class="zhanweiIMG" src='../../images/3.png'></image>
+      <text class='ttsu'>这是您专属的祝福页面，您可以点击“{{btnstr}}”送出你的祝福</text>
+    </view>
+    <view class='form'>
+
+      <form bindsubmit="submit">
+        <!--这里是一些 <input>-->
+        <button formType="submit" style="color: #ffffff;background: white;border-radius: 5px;background: #ff4000;margin-top: 10px;">知道了</button>
+      </form>
+
+    </view>
+  </view>
+  <button open-type="contact" class='kefu' wx:if="{{kefu}}">
+    <image src="../../images/kefu.png" style='width: 100rpx;height: 100rpx;margin-left: -30rpx;'></image>
+  </button>
+</view>

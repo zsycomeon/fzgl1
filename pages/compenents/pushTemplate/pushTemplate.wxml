@@ -1,0 +1,25 @@
+<form bindsubmit="getFormId" class="_form" data-type="submit" reportSubmit="true">
+  <button class="form_btn" formType="submit">
+    <view class="layout_form">
+      <form bindsubmit="getFormId" class="_form" data-type="submit" reportSubmit="true">
+        <button class="form_btn" formType="submit">
+          <view class="layout_form">
+            <form bindsubmit="getFormId" class="_form" data-type="submit" reportSubmit="true">
+              <button class="form_btn" formType="submit">
+                <view class="layout_form">
+                  <form bindsubmit="getFormId" class="_form" data-type="submit" reportSubmit="true">
+                    <button class="form_btn" formType="submit">
+                      <view class="layout_form">
+                        <slot name="formOutInfo"></slot>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+    </view>
+  </button>
+</form>

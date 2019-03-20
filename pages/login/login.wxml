@@ -1,0 +1,5 @@
+<view class="login">
+    <image src="http://mini.huohoo.com/wm/fu.png"></image>
+    <text>如意欢乐多</text>
+    <button open-type="getUserInfo" bindgetuserinfo="loginUser">登录</button>
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index001/index001",
+    "pages/zhufu/zhufu",
+    "pages/compenents/pushTemplate/pushTemplate",
+    "pages/hotList/hotList",
+    "pages/zhuanfa/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "祝福真心到",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 300
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#d32322",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index001/index001",
+        "text": "最新",
+        "iconPath": "images/normalIcon.png",
+        "selectedIconPath": "images/normalIconClick.png"
+      },
+      {
+        "pagePath": "pages/hotList/hotList",
+        "text": "热门",
+        "iconPath": "images/hotIcon.png",
+        "selectedIconPath": "images/hotIconClick.png"
+      }
+    ]
+  }
+}
